@@ -1,19 +1,19 @@
 import { HttpStatus } from '@nestjs/common';
 import { ApiResponse as ApiResponseBase } from '@nestjs/swagger';
 import {
-    ReferenceObject,
-    SchemaObject,
+  ReferenceObject,
+  SchemaObject,
 } from '@nestjs/swagger/dist/interfaces/open-api-spec.interface';
 import {
-    ErrorStatusKey,
-    BadRequestErrorCode,
-    UnauthorizedErrorCode,
-    ForbiddenErrorCode,
-    NotFoundErrorCode,
-    ConflictErrorCode,
-    UnprocessableEntityErrorCode,
-    TooManyRequestsErrorCode,
-    InternalServerErrorCode,
+  ErrorStatusKey,
+  BadRequestErrorCode,
+  UnauthorizedErrorCode,
+  ForbiddenErrorCode,
+  NotFoundErrorCode,
+  ConflictErrorCode,
+  UnprocessableEntityErrorCode,
+  TooManyRequestsErrorCode,
+  InternalServerErrorCode,
 } from '../../validation/error-codes';
 
 export type ErrorExpandedDesc = { key: string; description: string };
