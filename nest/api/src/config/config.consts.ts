@@ -25,10 +25,6 @@ export class EnvironmentVariables {
 
   @IsNotEmpty()
   @IsString()
-  OPEN_API_TITLE: string = 'Task Manager Nest API';
-
-  @IsNotEmpty()
-  @IsString()
   OPEN_API_VERSION: string = '1.0.0';
 
   @IsNotEmpty()

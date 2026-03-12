@@ -4,9 +4,9 @@ import { db } from '../../../core/postgres';
 import { Envs } from '../../../config/config.module';
 import { JwtService } from '../../../libs/validation/auth';
 import {
-  ApiError,
-  ConflictErrorCode,
-  UnauthorizedErrorCode,
+    ApiError,
+    ConflictErrorCode,
+    UnauthorizedErrorCode,
 } from '../../../libs/validation/error-codes';
 import { AuthResponseDto } from '../dto/auth-response.dto';
 import { ILoginUserDto } from '../dto/login-user.dto';

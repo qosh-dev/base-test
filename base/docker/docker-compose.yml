@@ -6,10 +6,10 @@ services:
     container_name: taskmanager_postgres
     restart: unless-stopped
     ports:
-      - "${POSTGRES_PORT:-5432}:5432"
+      - "${DB_PORT:-5432}:5432"
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-postgres}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
-      POSTGRES_DB: ${POSTGRES_DB:-taskmanager}
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASS:-postgres}
+      POSTGRES_DB: ${DB_NAME:-taskmanager}
     volumes:
       - ./postgres-data:/var/lib/postgresql/data

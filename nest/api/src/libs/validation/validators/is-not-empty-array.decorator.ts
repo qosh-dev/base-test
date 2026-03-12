@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import {
-  Validate,
-  type ValidationArguments,
-  type ValidationOptions,
-  ValidatorConstraint,
-  type ValidatorConstraintInterface,
+    Validate,
+    type ValidationArguments,
+    type ValidationOptions,
+    ValidatorConstraint,
+    type ValidatorConstraintInterface,
 } from 'class-validator';
 
 @Injectable()

@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 import {
-  ErrorStatusKey,
-  NotFoundErrorCode,
+    ErrorStatusKey,
+    NotFoundErrorCode,
 } from '../error-codes';
 
 export class ApiErrorResponseDto {

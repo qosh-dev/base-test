@@ -1,12 +1,12 @@
 import {
-	ArgumentsHost,
-	Catch,
-	HttpException,
-	HttpStatus,
-	ExceptionFilter as NestExceptionFilter,
-	Logger as NestLogger,
-	UnprocessableEntityException,
-	ValidationPipe,
+    ArgumentsHost,
+    Catch,
+    HttpException,
+    HttpStatus,
+    ExceptionFilter as NestExceptionFilter,
+    Logger as NestLogger,
+    UnprocessableEntityException,
+    ValidationPipe,
 } from '@nestjs/common';
 import { NestFastifyApplication } from '@nestjs/platform-fastify';
 import { ValidationError } from 'class-validator';
@@ -15,14 +15,14 @@ import { NodeEnv } from 'src/config/config.consts';
 import { Envs } from 'src/config/config.module';
 import { ApiError, ErrorStatusKey } from '../error-codes';
 import {
-	BadRequestErrorCode,
-	ConflictErrorCode,
-	ForbiddenErrorCode,
-	InternalServerErrorCode,
-	NotFoundErrorCode,
-	TooManyRequestsErrorCode,
-	UnauthorizedErrorCode,
-	UnprocessableEntityErrorCode,
+    BadRequestErrorCode,
+    ConflictErrorCode,
+    ForbiddenErrorCode,
+    InternalServerErrorCode,
+    NotFoundErrorCode,
+    TooManyRequestsErrorCode,
+    UnauthorizedErrorCode,
+    UnprocessableEntityErrorCode,
 } from '../error-codes.const';
 
 export class ExceptionFilter {

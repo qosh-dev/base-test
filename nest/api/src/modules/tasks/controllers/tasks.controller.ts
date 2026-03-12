@@ -7,11 +7,11 @@ import { TaskResponseDto } from '../dto/task-response.dto';
 import { UpdateTaskDto } from '../dto/update-task.dto';
 import { TasksService } from '../services/tasks.service';
 import {
-  DeleteTaskApi,
-  GetAllTasksApi,
-  GetByIdTaskApi,
-  PostCreateTaskApi,
-  PutUpdateTaskApi,
+    DeleteTaskApi,
+    GetAllTasksApi,
+    GetByIdTaskApi,
+    PostCreateTaskApi,
+    PutUpdateTaskApi,
 } from './api.decorators';
 
 @Controller('tasks')

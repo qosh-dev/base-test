@@ -1,14 +1,14 @@
 import { HttpStatus } from '@nestjs/common';
 import { ApiResponse } from '@nestjs/swagger';
 import {
-  BadRequestErrorCode,
-  UnauthorizedErrorCode,
-  ForbiddenErrorCode,
-  NotFoundErrorCode,
-  ConflictErrorCode,
-  UnprocessableEntityErrorCode,
-  TooManyRequestsErrorCode,
-  InternalServerErrorCode,
+    BadRequestErrorCode,
+    UnauthorizedErrorCode,
+    ForbiddenErrorCode,
+    NotFoundErrorCode,
+    ConflictErrorCode,
+    UnprocessableEntityErrorCode,
+    TooManyRequestsErrorCode,
+    InternalServerErrorCode,
 } from '../../validation/error-codes';
 
 export const ApiErrorResponse = () => {

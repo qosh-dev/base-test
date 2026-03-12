@@ -1,9 +1,9 @@
 import {
-  ValidationArguments,
-  type ValidationOptions,
-  ValidatorConstraint,
-  type ValidatorConstraintInterface,
-  registerDecorator,
+    ValidationArguments,
+    type ValidationOptions,
+    ValidatorConstraint,
+    type ValidatorConstraintInterface,
+    registerDecorator,
 } from 'class-validator';
 
 @ValidatorConstraint({ async: true })

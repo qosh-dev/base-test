@@ -1,8 +1,5 @@
 // Система авторизации
 
-// Module
-export * from './auth/auth.module';
-
 // Типы
 export * from './auth/types';
 

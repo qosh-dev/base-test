@@ -1,9 +1,9 @@
 import {
-  ExceptionFilter,
-  Catch,
-  ArgumentsHost,
-  BadRequestException,
-  HttpStatus,
+    ExceptionFilter,
+    Catch,
+    ArgumentsHost,
+    BadRequestException,
+    HttpStatus,
 } from '@nestjs/common';
 import { BadRequestErrorCode, UnprocessableEntityErrorCode } from '../error-codes';
 

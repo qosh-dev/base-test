@@ -71,3 +71,9 @@ SET
   updated_at = NOW()
 WHERE id = :id!
 RETURNING id;
+
+
+/* @name deleteTaskSql */
+DELETE FROM tasks
+WHERE id = :id!
+RETURNING id;

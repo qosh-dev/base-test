@@ -6,9 +6,9 @@ import { Envs } from '../../config/config.module';
 export class OpenApiProvider {
   static provide(app: any) {
     const config = new DocumentBuilder()
-      .setTitle(Envs.OPEN_API_TITLE)
+      .setTitle("Task Manager Nest API")
       .setVersion(Envs.OPEN_API_VERSION)
-      .setDescription('Task Manager API built with NestJS, Fastify, PostgreSQL and pgtyped.')
+      .setDescription('Task Manager API.')
       .addBearerAuth(
         {
           type: 'http',

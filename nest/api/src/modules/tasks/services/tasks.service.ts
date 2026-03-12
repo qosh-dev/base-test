@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { db } from '../../../core/postgres';
-import { FindManyResponseBase, IGetPaginatedBaseDto } from '../../../libs/dto';
+import { FindManyResponseBase, IGetPaginatedBaseDto, TaskStatus } from '../../../libs/dto';
 import {
   ApiError,
   ForbiddenErrorCode,
@@ -11,12 +11,11 @@ import { TaskResponseDto } from '../dto/task-response.dto';
 import { IUpdateTaskDto } from '../dto/update-task.dto';
 import {
   countTasksSql,
-  createTaskSql,
-  getTaskByIdSql,
+  createTaskSql, getTaskByIdSql,
   getTasksSql,
   softDeleteTaskSql,
   updateTaskSql,
-  type ITaskRow,
+  type IGetTaskByIdSqlResult
 } from '../sql/tasks.queries';
 
 @Injectable()
@@ -104,19 +103,19 @@ export class TasksService {
     this.logger.log(`Task soft deleted: ${id}`);
   }
 
-  private assertOwnership(userId: string, task: ITaskRow): void {
+  private assertOwnership(userId: string, task: IGetTaskByIdSqlResult): void {
     if (task.user_id !== userId) {
       throw new ApiError(ForbiddenErrorCode.INSUFFICIENT_PERMISSIONS);
     }
   }
 
-  private mapTask(task: ITaskRow): TaskResponseDto {
+  private mapTask(task: IGetTaskByIdSqlResult): TaskResponseDto {
     return {
       id: task.id,
       user_id: task.user_id,
       title: task.title,
       description: task.description,
-      status: task.status,
+      status: task.status as TaskStatus,
       created_at: task.created_at.toISOString(),
       updated_at: task.updated_at.toISOString(),
     };

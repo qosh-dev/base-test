@@ -2,9 +2,9 @@ import { HttpStatus, Type, applyDecorators } from '@nestjs/common';
 import { ApiOperation, ApiBody } from '@nestjs/swagger';
 import { ApiResponses } from './api-responses.decorator';
 import {
-  UnauthorizedErrorCode,
-  ForbiddenErrorCode,
-  BadRequestErrorCode,
+    UnauthorizedErrorCode,
+    ForbiddenErrorCode,
+    BadRequestErrorCode,
 } from '../../validation/error-codes';
 
 export interface ApiEndpointConfig<TDto = any, TResponse = any> {
