@@ -1,0 +1,49 @@
+{
+  "name": "task-manager-nest-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Task Manager API built with NestJS, Fastify, PostgreSQL and pgtyped",
+  "scripts": {
+    "build": "nest build",
+    "clean-build": "rm -rf dist",
+    "start": "nest start",
+    "dev": "nest start --watch",
+    "start:prod": "node dist/main",
+    "lint:types": "tsc --noEmit",
+    "sql:generate": "env-cmd -f .env pgtyped -w -c pgtyped.json",
+    "db:migration:up": "node ./scripts/run-migrations.mjs",
+    "test": "echo \"No tests configured yet for nest version\""
+  },
+  "dependencies": {
+    "@fastify/cors": "^10.0.1",
+    "@nestjs/common": "^11.1.6",
+    "@nestjs/config": "^4.0.2",
+    "@nestjs/core": "^11.1.6",
+    "@nestjs/jwt": "^11.0.1",
+    "@nestjs/platform-fastify": "^11.1.6",
+    "@nestjs/swagger": "^11.2.0",
+    "bcrypt": "^5.1.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "dotenv": "^16.4.7",
+    "env-cmd": "^10.1.0",
+    "fastify": "^5.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "migrat-postgres": "^0.2.0",
+    "pg": "^8.14.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.7",
+    "@nestjs/schematics": "^11.0.5",
+    "@nestjs/testing": "^11.1.6",
+    "@pgtyped/cli": "^2.4.0",
+    "@pgtyped/runtime": "^2.4.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.8",
+    "@types/node": "^22.13.10",
+    "@types/pg": "^8.11.10",
+    "typescript": "^5.8.2"
+  }
+}
